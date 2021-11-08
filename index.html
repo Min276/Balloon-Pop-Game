@@ -4,17 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/bbdccb4e58.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Pop the Ballons</title>
+    <title>Pop the Balloons</title>
 </head>
 <body>
     <div class="wrapper">
-        <h1>Pop the balloons by moving</br>your mouse over them</h1>
-        <div id="yay-no-balloons"><span class="blue">Wow!</span> All balloons popped!</div>
+
+        <h1>Pop the balloons when</br>you click them</h1>
+        <span id="box">Score <span id="score">0</span></span>
+        <button><i class="fas fa-play-circle"></i> Play</button>
+        <button id="pause"><i class="fas fa-pause-circle"></i> Pause</button>
+        <br>
+        <br>
+        <br>
+       
+        <div id="yay-no-balloons"><span class="blue">You Win!</span> All balloons are popped!</div>
         <div id="balloon-gallery">
             <div class="balloon"></div>
             <div class="balloon"></div>
             <div class="balloon"></div>
+            <div class="boom"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <!-- <div class="balloon"></div>
             <div class="balloon"></div>
             <div class="balloon"></div>
             <div class="balloon"></div>
@@ -23,22 +36,30 @@
             <div class="balloon"></div>
             <div class="balloon"></div>
             <div class="balloon"></div>
+            <div class="balloon"></div> -->
+            <div class="boom"></div>
+            <!-- <div class="balloon"></div> -->
             <div class="balloon"></div>
             <div class="balloon"></div>
             <div class="balloon"></div>
             <div class="balloon"></div>
             <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
-            <div class="balloon"></div>
+            <div class="boom"></div>
             <div class="balloon"></div>
         </div>
-
     </div>
+    <br><br><br>
+     <details id="hints">
+            <summary>Some Hints </summary>
+         <p>There are 3 bombs among the balloons. You can only click on "bomb" once. If over one time, it'll be game over.</p>
+</details>
+    <details>
+            <summary>Credit for the game sound</summary>
+         <p>Fluffing a Duck Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+Music promoted by https://www.chosic.com/free-music/all/</p>
+</details>
     <script src="app.js"></script>
 </body>
 </html>

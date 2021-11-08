@@ -7,10 +7,34 @@ body{
 .wrapper{
     max-width: 690px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .blue {
     color:#3f7abe;
+}
+#box{
+    padding: 11px;
+    background: #000000;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+#score{
+    padding: 11px;
+    border: 2px solid yellow;
+    margin-left: 10px;
+    margin-right: -11px;
+}
+button{
+    padding: 10px 10px 9px 10px;
+    border: 2px solid black;
+    background: black;
+    color: white;
+    font-size: 17px;
+}
+#hints{
+    display: none;
 }
 
 h1{
@@ -36,6 +60,7 @@ h1{
     display: inline-block;
     /* float: left; */
     margin: 2.5px 5 px 2.5px 0px;
+    animation: move 6s infinite linear;
 }
 
 #balloon-gallery div:nth-child(3n){
@@ -70,5 +95,5 @@ h1{
 #yay-no-balloons {
     display:none;
     color:#ff3300;
-    font-size:100px;
+    font-size: 50px;
 }
