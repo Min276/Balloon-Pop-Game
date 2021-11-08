@@ -48,6 +48,11 @@ let boom = 0;
 //     })
 // };
 
+let tryAgain = document.querySelector('#tryAgain');
+tryAgain.addEventListener('click', function(){
+    window.location.reload();
+})
+
 function checkAllPopped(){
      let gallery = document.querySelector('#balloon-gallery');
         let message = document.querySelector('#yay-no-balloons');
@@ -58,6 +63,7 @@ function checkAllPopped(){
         var win = new Audio('sound/winner.wav');
         win.play();
          gallery.innerHTML = '';
+        tryAgain.style.display = 'inline-block';
         message.style.display = 'block';
         button.style.display = "none";
         pause.style.display = "none";
@@ -68,6 +74,7 @@ function checkAllPopped(){
         lose.play();
         message.innerHTML = "Oops ! Try Again";
          gallery.innerHTML = '';
+        tryAgain.style.display = 'inline-block';
         message.style.display = 'block';
         button.style.display = "none";
         pause.style.display = "none";
