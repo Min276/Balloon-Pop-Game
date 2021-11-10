@@ -2,8 +2,8 @@ let popped = 0;
 let boom = 0;
      var audio = new Audio('sound/gamesound.mp3');
      
-     var button = document.querySelector("button");
-       button.addEventListener('click', function(){
+     var play = document.querySelector("#play");
+       play.addEventListener('click', function(){
         
           audio.play();
           audio.loop = true;
@@ -53,10 +53,18 @@ tryAgain.addEventListener('click', function(){
     window.location.reload();
 })
 
-function checkAllPopped(){
-     let gallery = document.querySelector('#balloon-gallery');
+
+
+  let gallery = document.querySelector('#balloon-gallery');
         let message = document.querySelector('#yay-no-balloons');
         let hints = document.querySelector('#hints');
+        let time = 20;
+let timeDisplay = document.querySelector('#time');
+const timeInterval = setInterval(updateTime, 1000);
+
+
+function checkAllPopped(){
+  
 
     if (popped === 10){
         console.log('all popped!');
@@ -65,9 +73,10 @@ function checkAllPopped(){
          gallery.innerHTML = '';
         tryAgain.style.display = 'inline-block';
         message.style.display = 'block';
-        button.style.display = "none";
+        play.style.display = "none";
         pause.style.display = "none";
         audio.pause();
+        clearTimeout(timeInterval);
 
     }else if (boom >= 2){
         var lose = new Audio('sound/loser.wav');
@@ -76,9 +85,35 @@ function checkAllPopped(){
          gallery.innerHTML = '';
         tryAgain.style.display = 'inline-block';
         message.style.display = 'block';
-        button.style.display = "none";
+        play.style.display = "none";
         pause.style.display = "none";
         audio.pause();
         hints.style.display = "block";
+        clearTimeout(timeInterval);
     }
 };
+
+
+function updateTime() {
+  time--;
+  timeDisplay.innerHTML = time + 's';
+
+  if (time === 0) {
+    clearTimeout(timeInterval);
+    // end game
+    gameOver();
+  }
+}
+
+function gameOver() {
+   var lose = new Audio('sound/loser.wav');
+        lose.play();
+        message.innerHTML = "Oops Time ran out ! Try Again";
+        gallery.innerHTML = '';
+        tryAgain.style.display = 'inline-block';
+        message.style.display = 'block';
+        play.style.display = "none";
+        pause.style.display = "none";
+        audio.pause();
+        hints.style.display = "block";
+}

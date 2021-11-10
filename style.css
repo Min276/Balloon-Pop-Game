@@ -13,28 +13,36 @@ body{
 .blue {
     color:#3f7abe;
 }
-#box{
+#box, #play, #pause{
     padding: 11px;
     background: #000000;
     color: white;
     border-radius: 5px;
     font-size: 20px;
 }
+#play, #pause{
+     font-size: 18px;
+      padding: 13px 13px 11px 13px;
+}
+#time {
+     padding: 9px;
+    border: 2px solid red;
+    margin-left: 10px;
+    margin-right: -11px;
+}
 #score{
-    padding: 11px;
+    padding: 10px;
     border: 2px solid yellow;
     margin-left: 10px;
     margin-right: -11px;
 }
-button{
-    padding: 10px 10px 9px 10px;
-    border: 2px solid black;
-    background: black;
-    color: white;
-    font-size: 17px;
-}
 #tryAgain{
     display: none;
+     padding: 14px 13px 11px 13px;
+    background: #08a3d9;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
 }
 #hints{
     display: none;
